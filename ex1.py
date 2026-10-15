@@ -7,7 +7,7 @@ import sys
 n = len(sys.argv)
 l = []
 for i in range(1,n):
-    l.append(argv[i])
+    l.append(sys.argv[i])
 
 def hello_python_exercises(student_names=["Bora"]):
     if student_names == ["Bora"]:
