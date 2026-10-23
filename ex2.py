@@ -61,7 +61,7 @@ def add_students(database, st_list=None, n=None):
             new.append({"id": 0, "name": name, "grade": grade})
     
     for student in new:
-        database.append(**{student, "id": next_id(database)})
+        database.append(**{student, "id", next_id(database)})
     return database
 
 def print_std(student):

@@ -19,4 +19,4 @@ def hello_python_exercises(student_names=["Bora"]):
 
 # hello_python_exercises()
 
-#hello_python_exercises(student_names=l)
+hello_python_exercises(student_names=l)

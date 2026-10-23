@@ -18,7 +18,7 @@ class Person:
 
     @classmethod
     def from_string(cls, string):
-        name, age, address = str.split(",", 2) # in case address contains commas, split on the first two commas
+        name, age, address = string.split(",", 2) # in case address contains commas, split on the first two commas
         return cls(name.strip(),int(age),address.strip())
         
 
@@ -29,3 +29,9 @@ class Student(Person):
     
     def greet(self):
         return f"A good day to {self.name} hailing from {self.university}!"
+
+    @classmethod
+    def from_string(cls, string):
+        name, age, rest = string.split(",", 2)
+        address, university = rest.rsplit(",", 1)
+        return cls(name.strip(), int(age), address.strip(), university.strip())

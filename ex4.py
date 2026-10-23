@@ -30,6 +30,10 @@ class ComplexNumber:
         sign = "+" if self.i >= 0 else "-"
         return f"{self.r} {sign} {abs(self.i)}i"
 
+    __repr__ = __str__
+    #def __repr__(self):
+    #    return f"ComplexNumber({self.r}, {self.i})"
+
 def sum_complex(complex_numbers):
     new_r = sum(list(map(lambda c: c.r, complex_numbers)))
     new_i = sum(list(map(lambda c: c.i, complex_numbers)))
