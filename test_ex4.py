@@ -1,4 +1,4 @@
-import ex4
+from aaip import ex4
 
 
 c = ex4.ComplexNumber(2, 3)
