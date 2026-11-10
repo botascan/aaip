@@ -88,7 +88,7 @@ def file_metadata(file_path):
     print(f"File size: {stat_result.st_size} Bytes")
     print(f"Time of last modification: {time.ctime(stat_result.st_mtime)}")
     # st_birthtime is not available everywhere; st_ctime is creation time only on Windows
-    created = getattr(stat_result, "st_birthtime", stat_result.st_ctime)
+    created = getattr(stat_result, "st_birthtime", stat_result.st_ctime) # subprocess.check_output also possible
     print(f"Time of creation (platform-dependent): {time.ctime(created)}")
 
     original_mode = stat.S_IMODE(stat_result.st_mode)
